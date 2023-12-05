@@ -1,0 +1,267 @@
+﻿<!!doctypehtml>
+<html lang='pt-BR'>
+ <head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Grey's Anatomy </title>
+</head>
+
+<body class="container-fluid">
+
+<header class="row col-12 text-black border">
+<div class="d-sm-none d-md-block col-md-1">
+<img id="menuimginicio" width="40%" src="imagens/notificaçoes.png">
+<a href="login.html"> <img id="menuimginicio" width="40%" src="imagens/house.png"></a>
+
+</div>
+<div class="col-sm-8 col-md-10">
+<h1 class="h1 text-center">Série</h1>
+<h1 class="h1 text-center">Grey's Anatomy</h1>
+<h2 class="h6 text-center">"Se você tem disposição para correr o risco, a vista do outro lado é espetacular"</h2>
+</div >
+<div id="home">
+<a href="siteinicio.html"> 
+</div>
+
+</header>
+<!--
+<nav class=""navbar navbar-dark bg-dark"">
+	<ul class="barranav">
+	   <li><a href="siteinicio.html">Início</a></li>
+	   <li><a href="sitepersonagens.html">Personagens</a></li>
+	   <li><a href="siteserie.html">Série</a></li>
+	   <li><a href="shipps.html">Ships</a></li>
+    </ul>
+</nav>	
+-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark col-12 border">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="textoNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Início<span class="sr-only">(Página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sitepersonagens.html">Personagens</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="shipps.html">Ships</a></li>
+     <li class="nav-item">
+        <a class="nav-link" href="siteserie.html">Série</a></li>
+		</ul>
+  </div>
+</nav>
+</header>
+
+<main>
+<h3> Bem vindo ao mundo de Grey's Anatomy!</h3>
+ <article>
+  <form action="login2.html">
+
+<p>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome" required maxlenght="180" pattern="[aA-zZ\s]+$" placeholder="Somente letras..."><br>
+	</p>
+	<p>
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+	</p>
+	<p>
+		<label for="senha">Senha:</label>
+		<input type="password" name="senha" id="senha" required maxlength="8" placeholder="Máximo de oito caracteres...">
+	</p>
+	<button type="button" class="botao" id="botao1" onclick="aparecer()">
+	Mais
+	</button>
+	<script>
+		function aparecer(){
+			var maistext = `<p>
+			<p>*Campos não obrigatórios*</p>
+<p>
+<label for="teste">Quanto você gosta da serie?</label><br>
+<input type="radio" name="teste" id="op1">
+<label for="op1">Normal, não me agrada muito</label>
+<input type="radio"  name="teste" id="op2">
+<label for="op2">Não gostei</label>
+<input type="radio" name="teste" id="op3">
+<label for="op3">Gostei bastante, mas chorei durante alguns episódios</label>
+<input type="radio" name="teste" id="op4">
+<label for="op4">Uma das minhas séries preferidas, eu amo!</label>
+</p>
+<p>Qual é seu personagem preferido?
+<select name="personagens">
+<option>Meredith Grey</option>
+<option>Derek Shepherd</option>   
+<option>Alex Karev</option>
+<option>Miranda Bailey</option>
+<option>Cristina Yang</option>
+<option>Richard Webber</option>
+<option>Izzie Stevens</option>
+<option>Owen Hunt</option>
+<option>Jackson Avery</option>
+<option>Callie Torres</option>
+<option>George O'Malley</option>
+<option>Arizona Robbins</option>
+<option>Maggie Pierce</option>
+<option>Amelia Shepherd</option>
+<option>Teddy Altman</option>
+<option>Jo Wilson</option>
+<option>April Kepner</option>   
+<option>Mark Sloan</option>
+<option>Addison Montgomery</option>
+<option>Lexy Grey</option>
+<option>Andrew DeLuca</option>
+<option>Preston Burke</option>
+<option>Levi Schmitt</option>
+<option>Lucas Adams</option>
+<option>Atticus Lincoln</option>
+<option>Ben Warren</option>
+<option>Nathan Riggs</option>
+<option>Carine DeLuca</option>
+<option>Stephanie Edwards</option>
+<option>Tom Koracick</option>
+<option>Nico Kim</option>
+<option>Elis Grey</option>   
+<option>Adele Webber</option>
+<option>Leag Murphy</option>
+<option>Taryn Helm</option>
+<option>Nicole Herman</option>
+<option>Catherine Avery</option>
+<option>Penelope Blake</option>
+<option>Não tenho personagem preferido</option>
+</select>
+</p>
+
+ <p>
+		<label for="texto">Deixe uma frase memorável da serie...</label><br>
+		<textarea name="texto" id="texto"></textarea>
+	</p>`
+            if((document.querySelector("#botao1").innerText.toString() + "") === "Mais"){
+				console.log("A")
+				document.querySelector("#botao1").innerHTML = `Menos`
+				document.querySelector("#mais1").innerHTML = maistext
+			} else if((document.querySelector("#botao1").innerText.toString() + "") === "Menos"){
+				document.querySelector("#botao1").innerHTML = `Mais`
+				document.querySelector("#mais1").innerHTML = ""
+			}
+		}
+	</script>
+	<span id="mais1"></span>
+	<p>
+		<input type="submit" value="Enviar">
+	</p>
+  </form>
+ </article>
+</main>
+
+
+
+<footer class="text-center bg-dark text-center text-white container-fluid">
+  
+  <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+    <div class="row">
+    <div class="col-sm-12 col-md-8 text-left">
+      <span>Grey's Anatomy</span>
+    </div>
+  
+    <div class="col-3 text-right d-sm-none d-md-block">
+
+      <a href="" class="me-4 text-reset col-3">
+        <i class="fab fa-twitter"><img width="6%" src="imagens/instagram.png"></i>
+      </a>
+      <a href="" class="me-5 text-reset col-3">
+        <i class="fab fa-google"><img width="6%" src="imagens/whatsapp.png"></i>
+      </a>
+    </div>
+    
+	</div>
+  </section>
+
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+     
+        <div class="row mt-3">
+       
+	   <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+		      <h6 class="text-uppercase fw-bold mb-4"> 
+		  SOBRE O SITE
+		  </h6>
+          <p>
+           O site tem como intuito apresentar um série que bombou nos anos 2000,<br>
+		   continua sendo um dos maiores sucessos até hoje.<br>
+		      "Às vezes é bom estar com medo. <br>
+			  Significa que você ainda tem alguma coisa a perder."- Richard Webber
+        </div>
+		
+		 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4"> 
+		  CONTATOS
+		  </h6>
+          <p>
+            <a href="#!" class="text-reset">31 de outubro de 2023</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Conheça mais sobre a desenvolvedora do site</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Instagram da desenvolvedora</a>
+          </p>
+        </div>
+       
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          
+          <h6 class="text-uppercase fw-bold mb-4">
+            Mais
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Conta</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Perguntas frequentes</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ajuda</a>
+          </p>
+        </div>
+       
+	   <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          
+          <h6 class="text-uppercase fw-bold mb-4">Contatos</h6>
+          <p><i class="fas fa-home me-3"></i> BR 470 Km 172 nº 6500</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            myllenaaaanichele@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> <a target="_blank" href="myllenaaaanichele@gmail@gmail" Enviar e-mail para a desenvolvedora do site </a></p>
+          <p><i class="fas fa-print me-3"></i> + 54 99629-****</p>
+        </div>
+       
+      </div>
+   
+    </div>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+	<p>Site desenvolvido por Myllena</p>
+  </div>
+
+</div>
+
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+ 
+ 
